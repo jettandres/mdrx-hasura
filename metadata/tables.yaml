@@ -1,1 +1,6 @@
-[]
+- table:
+    schema: public
+    name: schema_migrations
+- table:
+    schema: public
+    name: users
