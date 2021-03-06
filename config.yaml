@@ -1,5 +1,5 @@
 version: 2
-endpoint: https://mdrx-dev.hasura.app
+endpoint: http://ec2-3-128-90-213.us-east-2.compute.amazonaws.com
 metadata_directory: metadata
 actions:
   kind: synchronous
