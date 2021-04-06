@@ -1,1 +1,7 @@
-[]
+- table:
+    schema: public
+    name: supplier_type
+  is_enum: true
+- table:
+    schema: public
+    name: suppliers
