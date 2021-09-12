@@ -1,5 +1,12 @@
 - table:
     schema: public
+    name: custodian_assignment
+  is_enum: true
+- table:
+    schema: public
+    name: employees
+- table:
+    schema: public
     name: supplier_type
   is_enum: true
 - table:
