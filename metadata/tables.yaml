@@ -7,6 +7,38 @@
     name: employees
 - table:
     schema: public
+    name: expense
+  array_relationships:
+  - name: receipts
+    using:
+      foreign_key_constraint_on:
+        column: expense_id
+        table:
+          schema: public
+          name: receipts
+- table:
+    schema: public
+    name: expense_report
+  object_relationships:
+  - name: employee
+    using:
+      foreign_key_constraint_on: employee_id
+- table:
+    schema: public
+    name: receipts
+  object_relationships:
+  - name: expense
+    using:
+      foreign_key_constraint_on: expense_id
+  - name: expense_report
+    using:
+      foreign_key_constraint_on: expense_report_id
+- table:
+    schema: public
+    name: report_status
+  is_enum: true
+- table:
+    schema: public
     name: supplier_type
   is_enum: true
 - table:
