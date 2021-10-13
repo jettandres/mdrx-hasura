@@ -1,0 +1,1 @@
+CREATE TABLE "public"."expense_report_km_reading"("expense_report_id" uuid NOT NULL, "receipt_id" uuid NOT NULL, "created_at" timestamptz NOT NULL DEFAULT now(), "liters_added" numeric NOT NULL, "km_reading" numeric NOT NULL, PRIMARY KEY ("expense_report_id","receipt_id") , UNIQUE ("expense_report_id"), UNIQUE ("receipt_id"));

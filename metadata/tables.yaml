@@ -47,6 +47,16 @@
       foreign_key_constraint_on: expense_report_id
 - table:
     schema: public
+    name: expense_report_km_reading
+  object_relationships:
+  - name: expense_report
+    using:
+      foreign_key_constraint_on: expense_report_id
+  - name: receipt
+    using:
+      foreign_key_constraint_on: receipt_id
+- table:
+    schema: public
     name: receipts
   object_relationships:
   - name: expense
