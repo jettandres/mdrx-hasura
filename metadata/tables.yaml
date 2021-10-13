@@ -38,23 +38,9 @@
         table:
           schema: public
           name: receipts
-  - name: summary
-    using:
-      foreign_key_constraint_on:
-        column: expense_report_id
-        table:
-          schema: public
-          name: expense_report_summary
 - table:
     schema: public
     name: expense_report_funds
-  object_relationships:
-  - name: expense_report
-    using:
-      foreign_key_constraint_on: expense_report_id
-- table:
-    schema: public
-    name: expense_report_summary
   object_relationships:
   - name: expense_report
     using:
