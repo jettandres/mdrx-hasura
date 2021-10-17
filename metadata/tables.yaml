@@ -55,17 +55,6 @@
   - name: receipt
     using:
       foreign_key_constraint_on: receipt_id
-  event_triggers:
-  - name: compute_current_km_consumed
-    definition:
-      enable_manual: false
-      insert:
-        columns: '*'
-    retry_conf:
-      num_retries: 0
-      interval_sec: 10
-      timeout_sec: 60
-    webhook: https://ilj8xn5v15.execute-api.us-east-2.amazonaws.com/v1/compute-current-km-consumed
 - table:
     schema: public
     name: receipts
@@ -76,6 +65,14 @@
   - name: expense_report
     using:
       foreign_key_constraint_on: expense_report_id
+  - name: expense_report_km_reading
+    using:
+      manual_configuration:
+        remote_table:
+          schema: public
+          name: expense_report_km_reading
+        column_mapping:
+          id: receipt_id
 - table:
     schema: public
     name: report_status
