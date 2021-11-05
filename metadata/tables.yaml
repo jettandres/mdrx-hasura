@@ -73,6 +73,17 @@
           name: expense_report_km_reading
         column_mapping:
           id: receipt_id
+  event_triggers:
+  - name: delete_s3_image
+    definition:
+      enable_manual: true
+      delete:
+        columns: '*'
+    retry_conf:
+      num_retries: 0
+      interval_sec: 10
+      timeout_sec: 60
+    webhook: https://fr5fx9hv77.execute-api.us-east-2.amazonaws.com/v1/delete-s3-image
 - table:
     schema: public
     name: report_status
