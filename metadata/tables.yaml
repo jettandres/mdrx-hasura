@@ -5,6 +5,12 @@
 - table:
     schema: public
     name: employees
+  select_permissions:
+  - role: employee
+    permission:
+      columns:
+      - id
+      filter: {}
 - table:
     schema: public
     name: expense
