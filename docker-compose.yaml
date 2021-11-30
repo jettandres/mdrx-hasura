@@ -24,7 +24,7 @@ services:
       ## uncomment next line to set an admin secret
       HASURA_GRAPHQL_ADMIN_SECRET: myadminsecretkey
       HASURA_GRAPHQL_AUTH_HOOK_MODE: GET
-      HASURA_GRAPHQL_AUTH_HOOK: https://fr5fx9hv77.execute-api.us-east-2.amazonaws.com/v1/verify-token
+      HASURA_GRAPHQL_AUTH_HOOK: https://xqf77gl8j3.execute-api.us-east-2.amazonaws.com/v1/verify-token
 volumes:
   db_data:
 

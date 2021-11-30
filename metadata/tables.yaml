@@ -10,6 +10,14 @@
     permission:
       columns:
       - id
+      - created_at
+      - updated_at
+      - name
+      - contact_number
+      - email
+      - custodian_assignment
+      - area
+      - hasura_role
       filter: {}
 - table:
     schema: public
