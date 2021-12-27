@@ -9,15 +9,16 @@
   - role: employee
     permission:
       columns:
-      - id
-      - created_at
-      - updated_at
-      - name
-      - contact_number
-      - email
-      - custodian_assignment
       - area
+      - contact_number
+      - created_at
+      - custodian_assignment
+      - email
+      - funds
       - hasura_role
+      - id
+      - name
+      - updated_at
       filter: {}
 - table:
     schema: public
